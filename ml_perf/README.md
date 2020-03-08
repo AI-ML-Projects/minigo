@@ -15,7 +15,7 @@ cards.
 
 ```
     # Install dependencies
-    apt-get install -y python3 python3-pip rsync git wget pkg-config zip g++ zlib1g-dev unzip
+    apt-get --no-install-recommends  install -y apt-utils ca-certificatespython3 python3-pip rsync git wget pkg-config zip g++ zlib1g-dev unzip
 
     # Clone repository.
     git clone https://github.com/tensorflow/minigo

@@ -1,6 +1,6 @@
 FROM gcr.io/${PROJECT}/cc-base:v14
 
-RUN apt-get update && apt-get install gettext -y
+RUN apt-get update && apt-get --no-install-recommends  install -y apt-utils ca-certificates gettext -y
 
 COPY cgosGtp-linux-x86_64 /app
 

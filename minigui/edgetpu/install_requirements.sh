@@ -17,10 +17,10 @@ python3 -m pip install -r minigui/requirements.txt
 
 # For Raspberry Pi
 if grep -q "Raspberry Pi" /sys/firmware/devicetree/base/model; then
-  sudo apt-get install chromium xautomation
+  sudo apt-get --no-install-recommends  install -y apt-utils ca-certificates chromium xautomation
 # For DevBoard
 elif grep -q "MX8MQ" /sys/firmware/devicetree/base/model; then
-  sudo apt-get install chromium xautomation
+  sudo apt-get --no-install-recommends  install -y apt-utils ca-certificates chromium xautomation
 else
   echo "Generic Linux system"
 fi

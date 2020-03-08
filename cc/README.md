@@ -21,14 +21,14 @@ sudo ldconfig
 Now, you're ready to compile TensorFlow from source:
 
 ```shell
-sudo apt-get install zip
+sudo apt-get --no-install-recommends  install -y apt-utils ca-certificates zip
 ./cc/configure_tensorflow.sh
 ```
 
 If you want to compile for CPU and not GPU, then execute the following instead:
 
 ```shell
-sudo apt-get install zip
+sudo apt-get --no-install-recommends  install -y apt-utils ca-certificates zip
 TF_NEED_CUDA=0 ./cc/configure_tensorflow.sh
 ```
 

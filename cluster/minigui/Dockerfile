@@ -1,6 +1,6 @@
 FROM python:2.7-slim
 
-RUN apt update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get --no-install-recommends  install -y apt-utils ca-certificates\
         build-essential \
         curl \
         git \
@@ -29,7 +29,7 @@ ENV PATH /google-cloud-sdk/bin:$PATH
 RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
-    apt-get update -y && apt-get install google-cloud-sdk -y
+    apt-get update -y && apt-get --no-install-recommends  install -y apt-utils ca-certificates google-cloud-sdk -y
 VOLUME ["/root/.config"]
 
 WORKDIR /app
