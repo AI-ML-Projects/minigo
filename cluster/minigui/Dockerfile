@@ -37,10 +37,10 @@ WORKDIR /app
 # Here for caching.
 ADD staging/requirements.txt /app/requirements.txt
 ADD staging/minigui/requirements.txt /app/minigui/requirements.txt
-RUN pip3 install --upgrade pip
-RUN pip3 install -r /app/requirements.txt
-RUN pip3 install -r /app/minigui/requirements.txt
-RUN pip3 install "tensorflow>=1.7,<1.8"
+RUN pip3 install --no-cache-dir --upgrade pip
+RUN pip3 install --no-cache-dir -r /app/requirements.txt
+RUN pip3 install --no-cache-dir -r /app/minigui/requirements.txt
+RUN pip3 install --no-cache-dir "tensorflow>=1.7,<1.8"
 
 ADD staging/ /app
 

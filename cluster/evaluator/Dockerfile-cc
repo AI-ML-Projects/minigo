@@ -8,7 +8,7 @@ RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     apt-get update -y && apt-get install google-cloud-sdk -y
 
 RUN apt-get install python3 python3-pip -y
-RUN pip3 install absl-py
+RUN pip3 install --no-cache-dir absl-py
 
 COPY staging/ /app
 WORKDIR /app

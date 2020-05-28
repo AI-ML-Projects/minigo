@@ -25,17 +25,17 @@ cards.
     cd minigo
 
     # Create a virtualenv (this step is optional but highly recommended).
-    pip3 install virtualenv
-    pip3 install virtualenvwrapper
+    pip3 install --no-cache-dir virtualenv
+    pip3 install --no-cache-dir virtualenvwrapper
     virtualenv -p /usr/bin/python3 --system-site-packages $HOME/.venvs/minigo
     source $HOME/.venvs/minigo/bin/activate
 
     # Install Python dependencies
-    pip3 install -r requirements.txt
+    pip3 install --no-cache-dir -r requirements.txt
 
     # Install Python Tensorflow for GPU
     # (alternatively use "tensorflow==1.15.0" for CPU Tensorflow)
-    pip3 install "tensorflow-gpu==1.15.0"
+    pip3 install --no-cache-dir "tensorflow-gpu==1.15.0"
 
     # Install bazel
     BAZEL_VERSION=0.24.1

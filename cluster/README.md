@@ -20,7 +20,7 @@ Make sure you have the following command line tools:
 And the Python [kubernetes-client](https://github.com/kubernetes-client/python)
 
 ```
-pip install kubernetes
+pip install --no-cache-dir kubernetes
 ```
 
 Next, make sure you have a Google Cloud Project with GKE Enabled

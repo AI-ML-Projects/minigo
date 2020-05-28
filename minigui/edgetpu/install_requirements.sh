@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-python3 -m pip install -r minigui/requirements.txt
+python3 -m pip install --no-cache-dir -r minigui/requirements.txt
 
 # For Raspberry Pi
 if grep -q "Raspberry Pi" /sys/firmware/devicetree/base/model; then

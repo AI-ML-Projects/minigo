@@ -8,7 +8,7 @@ RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
 
 RUN apt-get install python3 python3-pip -y
 # TODO(AMJ): Get this to compile, determine base & pip requirementes
-RUN pip3 install absl-py
+RUN pip3 install --no-cache-dir absl-py
 
 COPY staging/ /app
 WORKDIR /app

@@ -78,9 +78,9 @@ COPY staging/cc/configure_tensorflow.sh cc/configure_tensorflow.sh
 ENV CC_OPT_FLAGS -march=ivybridge
 ADD staging/requirements.txt /app/requirements.txt
 
-RUN pip3 install --upgrade pip setuptools
+RUN pip3 install --no-cache-dir --upgrade pip setuptools
 #TODO: just install what we need (keras?) so changes to requirements.txt don't trigger TF rebuilds
-RUN pip3 install -r /app/requirements.txt
+RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
 ENV TF_NEED_TENSORRT 0
 RUN cc/configure_tensorflow.sh

@@ -23,7 +23,7 @@ RUN cp /app/build/leelaz /leelaz
 WORKDIR /
 RUN virtualenv -p /usr/bin/python2 mg_venv
 RUN . mg_venv/bin/activate \
-  && pip install gomill
+  && pip install --no-cache-dir gomill
 # ringmaster now available at /mg_venv/bin/ringmaster
 
 

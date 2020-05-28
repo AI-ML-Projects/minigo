@@ -72,8 +72,8 @@ intro to python development and virtualenv usage. The instructions after this
 point haven't been tested in environments that are not using virtualenv.
 
 ```shell
-pip3 install virtualenv
-pip3 install virtualenvwrapper
+pip3 install --no-cache-dir virtualenv
+pip3 install --no-cache-dir virtualenvwrapper
 ```
 
 Install Bazel
@@ -91,15 +91,15 @@ Install TensorFlow
 First set up and enter your virtualenv and then the shared requirements:
 
 ```
-pip3 install -r requirements.txt
+pip3 install --no-cache-dir -r requirements.txt
 ```
 
 Then, you'll need to choose to install the GPU or CPU tensorflow requirements:
 
-- GPU: `pip3 install "tensorflow-gpu==1.15.0"`.
+- GPU: `pip3 install --no-cache-dir "tensorflow-gpu==1.15.0"`.
   - *Note*: You must install [CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive). for Tensorflow
     1.13.0+.
-- CPU: `pip3 install "tensorflow==1.15.0"`.
+- CPU: `pip3 install --no-cache-dir "tensorflow==1.15.0"`.
 
 Setting up the Environment
 --------------------------
@@ -460,7 +460,7 @@ git clone https://github.com/tensorflow/minigo
 cd minigo
 
 # Install virtualenv.
-pip3 install virtualenv virtualenvwrapper
+pip3 install --no-cache-dir virtualenv virtualenvwrapper
 
 # Create a virtual environment
 virtualenv -p /usr/bin/python3 --system-site-packages "${HOME}/.venvs/minigo"
@@ -470,7 +470,7 @@ source "${HOME}/.venvs/minigo/bin/activate"
 
 # Install Minigo dependencies (TensorFlow for Cloud TPU is already installed as
 # part of the VM image).
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements.txt
 
 # When training on a Cloud TPU, the training work directory must be on Google Cloud Storage.
 # You'll need to choose your own globally unique bucket name.

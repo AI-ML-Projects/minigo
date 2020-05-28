@@ -40,12 +40,12 @@ reduced performance. Currently, Minigui's study mode requires the C++ engine.
 
 ## Advanced Instructions
 
-1. Install the minigo python requirements: `pip install -r requirements.txt` (or
+1. Install the minigo python requirements: `pip install --no-cache-dir -r requirements.txt` (or
    `pip3 ...` depending how you've set things up).
 
-1. Install TensorFlow (here, we use the CPU install): `pip install "tensorflow>=1.7,<1.8"`
+1. Install TensorFlow (here, we use the CPU install): `pip install --no-cache-dir "tensorflow>=1.7,<1.8"`
 
-1. Install the **minigui** python requirements: `pip install -r minigui/requirements.txt`
+1. Install the **minigui** python requirements: `pip install --no-cache-dir -r minigui/requirements.txt`
 
 1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/downloads)
 
